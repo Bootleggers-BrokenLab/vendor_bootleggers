@@ -26,6 +26,9 @@
         <permission name="android.permission.SET_WALLPAPER_COMPONENT"/>
         <permission name="android.permission.CHANGE_OVERLAY_PACKAGES"/>
     </privapp-permissions>
+    <privapp-permissions package="org.pixelexperience.screenshot">
+        <permission name="android.permission.READ_FRAME_BUFFER"/>
+    </privapp-permissions>
 
     <privapp-permissions package="com.bootleggers.shishuota">
         <permission name="android.permission.ACCESS_CACHE_FILESYSTEM"/>

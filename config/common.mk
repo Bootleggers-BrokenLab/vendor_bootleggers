@@ -82,6 +82,10 @@ ifeq ($(WITH_TWRP),true)
 include vendor/bootleggers/config/twrp.mk
 endif
 
+# Bootleg Perms
+PRODUCT_COPY_FILES += \
+   vendor/bootleggers/prebuilt/common/etc/permissions/privapp-permissions-bootleg.xml:system/etc/permissions/privapp-permissions-bootleg.xml \
+
 # Disable vendor restrictions
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
@@ -101,6 +105,7 @@ PRODUCT_PACKAGES += \
     htop \
     lib7z \
     libsepol \
+    Longshot \
     mke2fs \
     mkfs.ntfs \
     mount.ntfs \
