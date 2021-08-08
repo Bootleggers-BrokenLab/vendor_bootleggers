@@ -179,10 +179,17 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI \
     Launcher3QuickStep
 
+<<<<<<< HEAD
 # Some props that we need for the google stuff we're adding
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.com.google.ime.height_ratio=1.05 \
     ro.com.google.ime.emoji_key=false
+=======
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/lineage/overlay/no-rro
+PRODUCT_PACKAGE_OVERLAYS += \
+    vendor/lineage/overlay/common \
+    vendor/lineage/overlay/no-rro
+>>>>>>> c45359916 (lineage: overlay: Exclude backup transport overlays from RRO.)
 
 # Enable one-handed mode
 PRODUCT_PRODUCT_PROPERTIES += \
