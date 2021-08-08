@@ -188,7 +188,10 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.support_one_handed_mode=true
 
-PRODUCT_PACKAGE_OVERLAYS += vendor/bootleggers/overlay/common
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/bootleggers/overlay/no-rro
+PRODUCT_PACKAGE_OVERLAYS += \
+    vendor/bootleggers/overlay/common \
+    vendor/bootleggers/overlay/no-rro
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/bootleggers/config/partner_gms.mk
