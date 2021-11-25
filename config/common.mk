@@ -194,3 +194,7 @@ $(call inherit-product, packages/modules/Virtualization/apex/product_packages.mk
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.boot.hypervisor.vm.supported=1 \
     ro.boot.hypervisor.protected_vm.supported=1
+
+# RRO Overlays
+PRODUCT_PACKAGES += \
+    NavigationBarModeGesturalOverlayFS
