@@ -80,7 +80,8 @@ PRODUCT_COPY_FILES += \
     vendor/bootleggers/config/permissions/privapp-permissions-recorder.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-recorder.xml \
     vendor/bootleggers/config/permissions/bootleggers-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/bootleggers-hiddenapi-package-whitelist.xml \
     vendor/bootleggers/config/permissions/privapp-permissions-recorder.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-recorder.xml \
-    vendor/bootleggers/config/permissions/bootleggers-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/bootleggers-hiddenapi-package-whitelist.xml
+    vendor/bootleggers/config/permissions/bootleggers-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/bootleggers-hiddenapi-package-whitelist.xml \
+    vendor/bootleggers/config/permissions/privapp-permissions-settings.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-settings.xml
 
 # Face Unlock
 TARGET_FACE_UNLOCK_SUPPORTED ?= $(TARGET_SUPPORTS_64_BIT_APPS)
