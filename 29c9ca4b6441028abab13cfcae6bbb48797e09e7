@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "244c7d50_b5ca57bd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-07-31T21:10:51Z",
+      "side": 1,
+      "message": "Still not working. Consider testing this again after PixelPropUtils",
+      "revId": "29c9ca4b6441028abab13cfcae6bbb48797e09e7",
+      "serverId": "5a64c7d2-d220-4cff-a215-87a09ee22948"
+    }
+  ]
+}
