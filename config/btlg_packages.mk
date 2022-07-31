@@ -25,7 +25,7 @@ ifeq ($(BOOTLEGGERS_BUILD_APPS_BUNDLE),true)
 	Etar \
 	Jelly \
 	NotallyPrebuilt \
-	Phonograph \
+    PrebuiltAuxio \
 	QPGallery
 else
     PRODUCT_PACKAGES += \
