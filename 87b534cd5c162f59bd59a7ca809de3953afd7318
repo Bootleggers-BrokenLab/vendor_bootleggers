@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dc4972ac_d54f322a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-07-31T08:23:52Z",
+      "side": 1,
+      "message": "this works code wise but applying this makes our device throw the following error: \nthis device isn\u0027t play protect certified\n\nso it\u0027s not a good idea",
+      "revId": "87b534cd5c162f59bd59a7ca809de3953afd7318",
+      "serverId": "5a64c7d2-d220-4cff-a215-87a09ee22948"
+    }
+  ]
+}
