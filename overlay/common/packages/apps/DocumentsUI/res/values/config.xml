@@ -23,5 +23,9 @@
     <!-- Indicates if internal storage is shown as default or not. -->
     <bool name="config_default_show_device_root">true</bool>
 
+    <!-- This option allows us to hide the Files app icon from launcher on Android Go device.
+    Android Go device will have Files Go app for file management. -->
+    <bool name="is_launcher_enabled">false</bool>
+
     <string name="default_root_uri" translatable="false">content://com.android.externalstorage.documents/root/primary</string>
 </resources>
