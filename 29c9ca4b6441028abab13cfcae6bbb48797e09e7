@@ -16,6 +16,23 @@
       "message": "Still not working. Consider testing this again after PixelPropUtils",
       "revId": "29c9ca4b6441028abab13cfcae6bbb48797e09e7",
       "serverId": "5a64c7d2-d220-4cff-a215-87a09ee22948"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "aeeed7a8_4a38ff2e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2022-08-06T14:26:43Z",
+      "side": 1,
+      "message": "giving +1 as the code works itself, just the gapps package it directs to doesnt. Also this is needed to be picked if you wanna pick the other things without conflicts. MiXplorerPrebuilt is added. Logic for adding gapps buildtype is layed out. I dont see why we wouldnt wanna merge this actually",
+      "revId": "29c9ca4b6441028abab13cfcae6bbb48797e09e7",
+      "serverId": "5a64c7d2-d220-4cff-a215-87a09ee22948"
     }
   ]
 }
