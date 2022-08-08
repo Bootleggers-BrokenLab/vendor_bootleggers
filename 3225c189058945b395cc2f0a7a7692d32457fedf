@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e6b9e75e_a3e8808c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2022-08-08T08:04:41Z",
+      "side": 1,
+      "message": "pushed so that we have a milestone of our attempts to make bootanimations great again. For now this shouldnt be picked, as the individual tar files got bigger in most cases for whatever reason. every png inside the tars is smaller though, so maybe we just didnt pack them correctly. ",
+      "revId": "3225c189058945b395cc2f0a7a7692d32457fedf",
+      "serverId": "5a64c7d2-d220-4cff-a215-87a09ee22948"
+    }
+  ]
+}
