@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "29ab5bc3_19af33cb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2022-08-13T08:48:29Z",
+      "side": 1,
+      "message": "fixed up the commit and also pointed the the right gapps package now (crdroid ones)",
+      "revId": "926db8364ce0e534b221885ebb5313735924891c",
+      "serverId": "5a64c7d2-d220-4cff-a215-87a09ee22948"
+    }
+  ]
+}
