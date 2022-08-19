@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ec87b923_2f9bbbff",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2022-08-19T21:22:38Z",
+      "side": 1,
+      "message": "Tested, kernel building passed.",
+      "revId": "c28a63b57bc70d0a93a0c9fc197476ae781902d7",
+      "serverId": "5a64c7d2-d220-4cff-a215-87a09ee22948"
+    }
+  ]
+}
