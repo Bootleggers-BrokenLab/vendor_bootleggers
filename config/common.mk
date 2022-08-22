@@ -198,3 +198,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # RRO Overlays
 PRODUCT_PACKAGES += \
     NavigationBarModeGesturalOverlayFS
+
+# Gesture Overlays
+PRODUCT_PACKAGES += \
+  ImmersiveNavigationOverlay
