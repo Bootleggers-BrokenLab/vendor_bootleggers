@@ -8,7 +8,8 @@ PRODUCT_PACKAGES += \
     OmniStyle \
     OmniJaws \
     ShishufiedHeaders \
-    ThemePicker
+    ThemePicker \
+    Seedvault
 
 ## Setting this as true to build our main apps, can be disabled
 BOOTLEGGERS_BUILD_APPS_BUNDLE ?= true
