@@ -30,6 +30,7 @@ SOONG_CONFIG_bootleggersGlobalVars += \
     camera_needs_client_info_lib \
     has_legacy_camera_hal1 \
     gralloc_handle_has_custom_content_md_reserved_size \
+    bootloader_message_offset \
     gralloc_handle_has_reserved_size \
     needs_camera_boottime \
     target_init_vendor_lib \
@@ -69,6 +70,7 @@ SOONG_CONFIG_bootleggersGlobalVars_uses_nothing_camera := $(TARGET_USES_NOTHING_
 SOONG_CONFIG_bootleggersGlobalVars_gralloc_handle_has_custom_content_md_reserved_size := $(TARGET_GRALLOC_HANDLE_HAS_CUSTOM_CONTENT_MD_RESERVED_SIZE)
 
 # Set default values
+BOOTLOADER_MESSAGE_OFFSET ?= 0
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS ?= 0
 TARGET_GRALLOC_HANDLE_HAS_CUSTOM_CONTENT_MD_RESERVED_SIZE ?= false
 TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE ?= false
@@ -87,6 +89,7 @@ SOONG_CONFIG_bootleggersGlobalVars_target_surfaceflinger_udfps_lib := $(TARGET_S
 SOONG_CONFIG_bootleggersGlobalVars_uses_camera_parameter_lib := $(TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY)
 SOONG_CONFIG_bootleggersGlobalVars_camera_needs_client_info := $(TARGET_CAMERA_NEEDS_CLIENT_INFO)
 SOONG_CONFIG_bootleggersGlobalVars_camera_needs_client_info_lib := $(TARGET_CAMERA_NEEDS_CLIENT_INFO_LIB)
+SOONG_CONFIG_bootleggersGlobalVars_bootloader_message_offset := $(BOOTLOADER_MESSAGE_OFFSET)
 ifneq ($(filter $(QSSI_SUPPORTED_PLATFORMS),$(TARGET_BOARD_PLATFORM)),)
 SOONG_CONFIG_bootleggersQcomVars_qcom_display_headers_namespace := vendor/qcom/opensource/commonsys-intf/display
 else

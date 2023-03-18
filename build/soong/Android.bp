@@ -90,7 +90,7 @@ gralloc_10_usage_bits {
 soong_config_module_type {
     name: "gralloc_handle_custom_content_md_reserved_size",
     module_type: "cc_defaults",
-    config_namespace: "lineageGlobalVars",
+    config_namespace: "bootleggersGlobalVars",
     bool_variables: ["gralloc_handle_has_custom_content_md_reserved_size"],
     properties: ["export_cflags"],
 }
@@ -294,6 +294,27 @@ camera_parameter_library {
     soong_config_variables: {
         uses_camera_parameter_lib: {
             whole_static_libs: ["%s"],
+        },
+    },
+}
+
+soong_config_module_type {
+    name: "bootloader_message_offset",
+    module_type: "cc_defaults",
+    config_namespace: "bootleggersGlobalVars",
+    value_variables: ["bootloader_message_offset"],
+    properties: [
+        "cflags",
+        "export_cflags",
+    ],
+}
+
+bootloader_message_offset {
+    name: "bootloader_message_offset_defaults",
+    soong_config_variables: {
+        bootloader_message_offset: {
+            cflags: ["-DBOARD_RECOVERY_BLDRMSG_OFFSET=%s"],
+            export_cflags: ["-DBOARD_RECOVERY_BLDRMSG_OFFSET=%s"],
         },
     },
 }
