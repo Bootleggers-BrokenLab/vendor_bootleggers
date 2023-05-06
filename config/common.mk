@@ -124,6 +124,10 @@ PRODUCT_PACKAGES += \
     wget \
     zip
 
+# Extra cmdline tools
+PRODUCT_PACKAGES += \
+    zstd
+
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images
