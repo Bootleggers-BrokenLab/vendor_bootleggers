@@ -47,7 +47,7 @@ SOONG_CONFIG_bootleggersGlobalVars += \
     uses_camera_parameter_lib \
     uses_egl_display_array \
     uses_oplus_camera \
-    uses_nothing_camera
+    include_miui_camera
 
 SOONG_CONFIG_NAMESPACES += bootleggersNvidiaVars
 SOONG_CONFIG_bootleggersNvidiaVars += \
@@ -76,9 +76,11 @@ SOONG_CONFIG_bootleggersQcomVars_qti_vibrator_use_effect_stream := $(TARGET_QTI_
 SOONG_CONFIG_bootleggersQcomVars_supports_extended_compress_format := $(AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT)
 SOONG_CONFIG_bootleggersQcomVars_uses_pre_uplink_features_netmgrd := $(TARGET_USES_PRE_UPLINK_FEATURES_NETMGRD)
 SOONG_CONFIG_bootleggersGlobalVars_uses_oplus_camera := $(TARGET_USES_OPLUS_CAMERA)
+SOONG_CONFIG_bootleggersGlobalVars_include_miui_camera := $(TARGET_INCLUDES_MIUI_CAMERA)
 SOONG_CONFIG_bootleggersGlobalVars_uses_nothing_camera := $(TARGET_USES_NOTHING_CAMERA)
 SOONG_CONFIG_bootleggersGlobalVars_gralloc_handle_has_custom_content_md_reserved_size := $(TARGET_GRALLOC_HANDLE_HAS_CUSTOM_CONTENT_MD_RESERVED_SIZE)
 SOONG_CONFIG_bootleggersGlobalVars_gralloc_handle_has_ubwcp_format := $(TARGET_GRALLOC_HANDLE_HAS_UBWCP_FORMAT)
+
 
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
