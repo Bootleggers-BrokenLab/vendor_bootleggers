@@ -32,6 +32,7 @@ SOONG_CONFIG_bootleggersGlobalVars += \
     camera_needs_client_info_lib \
     camera_needs_client_info_lib_oplus \
     has_legacy_camera_hal1 \
+    camera_override_format_from_reserved \
     gralloc_handle_has_custom_content_md_reserved_size \
     bootloader_message_offset \
     gralloc_handle_has_reserved_size \
@@ -70,6 +71,7 @@ SOONG_CONFIG_bootleggersQcomVars += \
 endif
 
 # Soong bool variables
+SOONG_CONFIG_bootleggersGlobalVars_camera_override_format_from_reserved := $(TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED)
 SOONG_CONFIG_bootleggersGlobalVars_gralloc_handle_has_reserved_size := $(TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE)
 SOONG_CONFIG_bootleggersGlobalVars_has_legacy_camera_hal1 := $(TARGET_HAS_LEGACY_CAMERA_HAL1)
 SOONG_CONFIG_bootleggersGlobalVars_needs_camera_boottime := $(TARGET_CAMERA_BOOTTIME_TIMESTAMP)
@@ -88,6 +90,7 @@ SOONG_CONFIG_bootleggersGlobalVars_gralloc_handle_has_ubwcp_format := $(TARGET_G
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS ?= 0
+TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED ?= false
 TARGET_GRALLOC_HANDLE_HAS_CUSTOM_CONTENT_MD_RESERVED_SIZE ?= false
 TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE ?= false
 TARGET_GRALLOC_HANDLE_HAS_UBWCP_FORMAT ?= false
