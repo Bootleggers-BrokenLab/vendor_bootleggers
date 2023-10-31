@@ -2,10 +2,10 @@ PRODUCT_BRAND ?= Bootleggers
 
 # Versioning System
 # Bootleggers version over here.
-PRODUCT_VERSION_MAJOR = Tirimbino
-PRODUCT_VERSION_MINOR = niceparse.Night_Drive
-BOOTLEGGERS_VERSION_NUMBER := 7.1-Testing
-BOOTLEGGERS_SONGCODEURL = https://cutt.ly/yL56Rk3
+PRODUCT_VERSION_MAJOR = Urubino
+PRODUCT_VERSION_MINOR = niceparse.O
+BOOTLEGGERS_VERSION_NUMBER := 7.9-Testing
+BOOTLEGGERS_SONGCODEURL = https://cutt.ly/zwE3JaNb
 BOOTLEGGERS_EPOCH := $(shell date +%s)
 BOOTLEGGERS_POSTFIX := -$(shell date -d @$(BOOTLEGGERS_EPOCH) +"%Y%m%d-%H%M%S")
 
