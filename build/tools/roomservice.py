@@ -36,8 +36,8 @@ org_manifest = "bootleg-devices"  # leave empty if org is provided in manifest
 org_display = "BootleggersROM-Devices"  # needed for displaying
 
 default_manifest = ".repo/manifests/default.xml"
-bootleg_manifest = ".repo/manifests/bootleggers.xml"
-external_manifest = ".repo/manifests/external.xml"
+bootleg_manifest = ".repo/manifests/snippets/bootleggers.xml"
+external_manifest = ".repo/manifests/snippets/external.xml"
 
 github_token = None
 
