@@ -37,7 +37,7 @@ org_display = "BootleggersROM-Devices"  # needed for displaying
 
 default_manifest = ".repo/manifests/default.xml"
 bootleg_manifest = ".repo/manifests/bootleggers.xml"
-lineage_manifest = ".repo/manifests/lineage.xml"
+external_manifest = ".repo/manifests/external.xml"
 
 github_token = None
 
@@ -139,7 +139,7 @@ def add_to_manifest(repos, fallback_branch=None):
     lm = load_manifest(custom_local_manifest)
     mlm = load_manifest(default_manifest)
     bootlegm = load_manifest(bootleg_manifest)
-    lineagem = load_manifest(lineage_manifest)
+    externalm = load_manifest(external_manifest)
 
     for repo in repos:
 
@@ -174,8 +174,8 @@ def add_to_manifest(repos, fallback_branch=None):
            existing_m_project = exists_in_tree(mlm, repo_path)
         elif exists_in_tree(bootlegm, repo_path) != None:
              existing_m_project = exists_in_tree(bootlegm, repo_path)
-        elif exists_in_tree(lineagem, repo_path) != None:
-             existing_m_project = exists_in_tree(lineagem, repo_path)
+        elif exists_in_tree(externalm, repo_path) != None:
+             existing_m_project = exists_in_tree(externalm, repo_path)
 
         if existing_m_project != None:
             if existing_m_project.attrib['path'] == repo['target_path']:
