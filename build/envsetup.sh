@@ -941,3 +941,4 @@ function fixup_common_out_dir() {
 }
 
 export SKIP_ABI_CHECKS=true
+export BUILD_BROKEN_DISABLE_BAZEL=true
