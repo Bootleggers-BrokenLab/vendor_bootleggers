@@ -82,6 +82,22 @@ PRODUCT_COPY_FILES += \
     vendor/bootleggers/config/permissions/privapp-permissions-recorder.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-recorder.xml \
     vendor/bootleggers/config/permissions/bootleggers-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/bootleggers-hiddenapi-package-whitelist.xml
 
+# Face Unlock
+TARGET_FACE_UNLOCK_SUPPORTED ?= $(TARGET_SUPPORTS_64_BIT_APPS)
+
+PRODUCT_PACKAGES += \
+    FaceUnlockOverlay
+
+ifeq ($(TARGET_FACE_UNLOCK_SUPPORTED),true)
+PRODUCT_PACKAGES += \
+    ParanoidSense
+
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.face.sense_service=$(TARGET_FACE_UNLOCK_SUPPORTED)
+
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.biometrics.face.xml
+endif
 
 # TWRP
 ifeq ($(WITH_TWRP),true)
