@@ -97,6 +97,10 @@ PRODUCT_PACKAGES += \
 # Include Potato volume panels
 -include packages/modules/VolumePanelPlugins/plugins.mk
 
+# Repainter Service Privileged
+PRODUCT_PACKAGES += \
+    RepainterServicePriv
+
 ### COMMENTED WASTELAND - MOVED TEMPORALLY HERE DUE TO WIP ###
 #
 #
