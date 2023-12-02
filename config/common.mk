@@ -211,3 +211,6 @@ include vendor/bootleggers/config/btlg_main.mk
 # RRO Overlays
 PRODUCT_PACKAGES += \
     NavigationBarModeGesturalOverlayFS
+
+# Certification
+-include vendor/certification/config.mk
