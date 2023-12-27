@@ -124,7 +124,7 @@ gralloc_handle_reserved_size {
 soong_config_module_type {
     name: "gralloc_handle_ubwcp_format",
     module_type: "cc_defaults",
-    config_namespace: "evolutionGlobalVars",
+    config_namespace: "bootleggersGlobalVars",
     bool_variables: ["gralloc_handle_has_ubwcp_format"],
     properties: ["export_cflags"],
 }
@@ -514,34 +514,18 @@ inputdispatcher_skip_event_key {
 }
 
 soong_config_module_type {
-    name: "uses_oplus_camera",
+    name: "target_camera_package_name",
     module_type: "cc_defaults",
     config_namespace: "bootleggersGlobalVars",
-    bool_variables: ["uses_oplus_camera"],
-    properties: ["cppflags"],
-}
-uses_oplus_camera {
-    name: "uses_oplus_camera_defaults",
-    soong_config_variables: {
-        uses_oplus_camera: {
-            cppflags: ["-DUSES_OPLUS_CAMERA"],
-        },
-    },
-}
-
-soong_config_module_type {
-    name: "uses_nothing_camera",
-    module_type: "cc_defaults",
-    config_namespace: "bootleggersGlobalVars",
-    bool_variables: ["uses_nothing_camera"],
+    value_variables: ["target_camera_package_name"],
     properties: ["cppflags"],
 }
 
-uses_nothing_camera {
-    name: "uses_nothing_camera_defaults",
+target_camera_package_name {
+    name: "camera_package_name_defaults",
     soong_config_variables: {
-        uses_nothing_camera: {
-            cppflags: ["-DUSES_NOTHING_CAMERA"],
+        target_camera_package_name: {
+            cppflags: ["-DCAMERA_PACKAGE_NAME=\"%s\""],
         },
     },
 }
@@ -549,7 +533,7 @@ uses_nothing_camera {
 soong_config_module_type {
     name: "include_miui_camera",
     module_type: "cc_defaults",
-    config_namespace: "customGlobalVars",
+    config_namespace: "bootleggersGlobalVars",
     bool_variables: ["include_miui_camera"],
     properties: ["cppflags"],
 }
@@ -565,7 +549,7 @@ include_miui_camera {
 soong_config_module_type {
     name: "camera_needs_miui_camera_mode_support",
     module_type: "cc_defaults",
-    config_namespace: "customGlobalVars",
+    config_namespace: "bootleggersGlobalVars",
     bool_variables: ["camera_needs_miui_camera_mode_support"],
     properties: ["cppflags"],
 }
@@ -582,7 +566,7 @@ camera_needs_miui_camera_mode_support {
 soong_config_module_type {
     name: "camera_needs_camera_needs_depth_sensor_override",
     module_type: "cc_defaults",
-    config_namespace: "customGlobalVars",
+    config_namespace: "bootleggersGlobalVars",
     bool_variables: ["camera_needs_camera_needs_depth_sensor_override"],
     properties: ["cppflags"],
 }
@@ -592,23 +576,6 @@ camera_needs_camera_needs_depth_sensor_override {
     soong_config_variables: {
         camera_needs_camera_needs_depth_sensor_override: {
             cppflags: ["-DCAMERA_NEEDS_CAMERA_NEEDS_DEPTH_SENSOR_OVERRIDE"],
-        },
-    },
-}
-
-soong_config_module_type {
-    name: "uses_oppo_camera",
-    module_type: "cc_defaults",
-    config_namespace: "customGlobalVars",
-    bool_variables: ["uses_oppo_camera"],
-    properties: ["cppflags"],
-}
-
-uses_oppo_camera {
-    name: "uses_oppo_camera_defaults",
-    soong_config_variables: {
-        uses_oppo_camera: {
-            cppflags: ["-DUSES_OPPO_CAMERA"],
         },
     },
 }

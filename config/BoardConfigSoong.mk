@@ -48,8 +48,7 @@ SOONG_CONFIG_bootleggersGlobalVars += \
     target_surfaceflinger_udfps_lib \
     uses_camera_parameter_lib \
     uses_egl_display_array \
-    uses_oplus_camera \
-    uses_oppo_camera \
+    target_camera_package_name \
     include_miui_camera
 
 SOONG_CONFIG_NAMESPACES += bootleggersNvidiaVars
@@ -78,12 +77,10 @@ SOONG_CONFIG_bootleggersNvidiaVars_uses_nv_enhancements := $(NV_ANDROID_FRAMEWOR
 SOONG_CONFIG_bootleggersQcomVars_qti_vibrator_use_effect_stream := $(TARGET_QTI_VIBRATOR_USE_EFFECT_STREAM)
 SOONG_CONFIG_bootleggersQcomVars_supports_extended_compress_format := $(AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT)
 SOONG_CONFIG_bootleggersQcomVars_uses_pre_uplink_features_netmgrd := $(TARGET_USES_PRE_UPLINK_FEATURES_NETMGRD)
-SOONG_CONFIG_bootleggersGlobalVars_uses_oplus_camera := $(TARGET_USES_OPLUS_CAMERA)
-SOONG_CONFIG_bootleggersGlobalVars_uses_oppo_camera := $(TARGET_USES_OPPO_CAMERA)
 SOONG_CONFIG_bootleggersGlobalVars_camera_needs_miui_camera_mode_support := $(TARGET_USES_MIUI_CAMERA)
 SOONG_CONFIG_bootleggersGlobalVars_camera_needs_camera_needs_depth_sensor_override := $(TARGET_USES_DEPTHSENSOR_OVERRIDE)
 SOONG_CONFIG_bootleggersGlobalVars_include_miui_camera := $(TARGET_INCLUDES_MIUI_CAMERA)
-SOONG_CONFIG_bootleggersGlobalVars_uses_nothing_camera := $(TARGET_USES_NOTHING_CAMERA)
+SOONG_CONFIG_bootleggersGlobalVars_target_camera_package_name := $(TARGET_CAMERA_PACKAGE_NAME)
 SOONG_CONFIG_bootleggersGlobalVars_gralloc_handle_has_custom_content_md_reserved_size := $(TARGET_GRALLOC_HANDLE_HAS_CUSTOM_CONTENT_MD_RESERVED_SIZE)
 SOONG_CONFIG_bootleggersGlobalVars_gralloc_handle_has_ubwcp_format := $(TARGET_GRALLOC_HANDLE_HAS_UBWCP_FORMAT)
 
