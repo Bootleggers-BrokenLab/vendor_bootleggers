@@ -30,6 +30,7 @@ SOONG_CONFIG_bootleggersGlobalVars += \
     camera_needs_camera_needs_depth_sensor_override \
     camera_needs_client_info \
     camera_needs_client_info_lib \
+    camera_needs_client_info_lib_oplus \
     has_legacy_camera_hal1 \
     gralloc_handle_has_custom_content_md_reserved_size \
     bootloader_message_offset \
@@ -111,6 +112,7 @@ SOONG_CONFIG_bootleggersGlobalVars_target_surfaceflinger_udfps_lib := $(TARGET_S
 SOONG_CONFIG_bootleggersGlobalVars_uses_camera_parameter_lib := $(TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY)
 SOONG_CONFIG_bootleggersGlobalVars_camera_needs_client_info := $(TARGET_CAMERA_NEEDS_CLIENT_INFO)
 SOONG_CONFIG_bootleggersGlobalVars_camera_needs_client_info_lib := $(TARGET_CAMERA_NEEDS_CLIENT_INFO_LIB)
+SOONG_CONFIG_bootleggersGlobalVars_camera_needs_client_info_lib_oplus := $(TARGET_CAMERA_NEEDS_CLIENT_INFO_LIB_OPLUS)
 SOONG_CONFIG_bootleggersGlobalVars_bootloader_message_offset := $(BOOTLOADER_MESSAGE_OFFSET)
 SOONG_CONFIG_bootleggersGlobalVars_target_health_charging_control_charging_path := $(TARGET_HEALTH_CHARGING_CONTROL_CHARGING_PATH)
 SOONG_CONFIG_bootleggersGlobalVars_target_health_charging_control_charging_enabled := $(TARGET_HEALTH_CHARGING_CONTROL_CHARGING_ENABLED)
