@@ -38,6 +38,10 @@ PRODUCT_COPY_FILES += \
     vendor/bootleggers/prebuilt/common/bin/backuptool_postinstall.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_postinstall.sh
 endif
 
+# Cloned app exemption
+PRODUCT_COPY_FILES += \
+    vendor/bootleggers/prebuilt/common/etc/sysconfig/preinstalled-packages-platform-custom-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/preinstalled-packages-platform-custom-product.xml
+
 # system mount
 PRODUCT_COPY_FILES += \
     vendor/bootleggers/build/tools/system-mount.sh:install/bin/system-mount.sh
