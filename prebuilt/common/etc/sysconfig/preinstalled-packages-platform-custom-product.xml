@@ -212,12 +212,6 @@
         <install-in user-type="PROFILE" />
         <do-not-install-in user-type="android.os.usertype.profile.CLONE" />
     </install-in-user-type>
-    <!-- Settings -->
-    <install-in-user-type package="com.android.settings">
-        <install-in user-type="FULL" />
-        <install-in user-type="PROFILE" />
-        <do-not-install-in user-type="android.os.usertype.profile.CLONE" />
-    </install-in-user-type>
     <!-- GameSpace -->
     <install-in-user-type package="io.chaldeaprjkt.gamespace">
         <install-in user-type="FULL" />
@@ -226,6 +220,18 @@
     </install-in-user-type>
     <!-- Dolby -->
     <install-in-user-type package="com.dolby.daxappui">
+        <install-in user-type="FULL" />
+        <install-in user-type="PROFILE" />
+        <do-not-install-in user-type="android.os.usertype.profile.CLONE" />
+    </install-in-user-type>
+    <!-- MiXplorer -->
+    <install-in-user-type package="com.mixplorer">
+        <install-in user-type="FULL" />
+        <install-in user-type="PROFILE" />
+        <do-not-install-in user-type="android.os.usertype.profile.CLONE" />
+    </install-in-user-type>
+    <!-- GNotes -->
+    <install-in-user-type package="com.google.android.keep">
         <install-in user-type="FULL" />
         <install-in user-type="PROFILE" />
         <do-not-install-in user-type="android.os.usertype.profile.CLONE" />
