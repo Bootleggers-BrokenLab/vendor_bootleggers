@@ -170,12 +170,6 @@
         <install-in user-type="PROFILE" />
         <do-not-install-in user-type="android.os.usertype.profile.CLONE" />
     </install-in-user-type>
-    <!-- Google Keyboard -->
-    <install-in-user-type package="com.google.android.inputmethod.latin">
-        <install-in user-type="FULL" />
-        <install-in user-type="PROFILE" />
-        <do-not-install-in user-type="android.os.usertype.profile.CLONE" />
-    </install-in-user-type>
     <!-- Android Auto -->
     <install-in-user-type package="com.google.android.projection.gearhead">
         <install-in user-type="FULL" />
