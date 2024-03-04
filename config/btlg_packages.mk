@@ -43,14 +43,17 @@ ifeq ($(BOOTLEGGERS_BUILD_APPS_BUNDLE),true)
         QPGallery
 endif
 
-# Inlcude Google Apps
+# Include Google Apps
 ifeq ($(WITH_GAPPS),true)
     $(call inherit-product, vendor/gapps/common/common-vendor.mk)
 endif
 
-# Inlcude MicroG
+# Include MicroG
 ifeq ($(WITH_MICROG),true)
-    $(call inherit-product, vendor/foss/foss.mk)
+    PRODUCT_PACKAGES += \
+        GmsCore \
+        GmsCompanion \
+        GsfProxy
 endif
 
 ifeq ($(BOOTLEGGERS_BUILD_TYPE),Shishufied)
