@@ -58,7 +58,7 @@ do
 
   # Line with after --- until was too long for a small ListView
   echo "====================" >> "$changelog"
-  echo "     $until_date"     >> "$changelog"
+  echo "     $after_date"     >> "$changelog"
   echo "====================" >> "$changelog"
   echo >> "$changelog"
 
