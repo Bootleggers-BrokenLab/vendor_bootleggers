@@ -50,10 +50,7 @@ endif
 
 # Include MicroG
 ifeq ($(WITH_MICROG),true)
-    PRODUCT_PACKAGES += \
-        GmsCore \
-        GmsCompanion \
-        GsfProxy
+    $(call inherit-product, vendor/microg/vendor_microg.mk)
 endif
 
 ifeq ($(BOOTLEGGERS_BUILD_TYPE),Shishufied)
