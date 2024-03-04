@@ -60,7 +60,6 @@ do
   echo "====================" >> "$changelog"
   echo "     $after_date"     >> "$changelog"
   echo "====================" >> "$changelog"
-  echo >> "$changelog"
 
   # Cycle through all available repos
   for repo_path in $REPO_LIST; do
@@ -71,6 +70,7 @@ do
       echo "$GIT_LOG"
     } >> $changelog
   done
+  echo >> $changelog
   echo >> $changelog
 done
 
