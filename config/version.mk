@@ -1,4 +1,4 @@
-# Copyright (C) 2020 YAAP
+# Copyright (C) 2020 BOOTLEGGERS
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,29 +14,29 @@
 
 # Versioning System
 BUILD_DATE := $(shell date +%Y%m%d)
-TARGET_PRODUCT_SHORT := $(subst yaap_,,$(YAAP_BUILD))
+TARGET_PRODUCT_SHORT := $(subst bootleggers_,,$(BOOTLEGGERS_BUILD))
 
-YAAP_BUILDTYPE ?= HOMEMADE
-YAAP_BUILD_VERSION := $(PLATFORM_VERSION)
-YAAP_VERSION := $(YAAP_BUILD_VERSION)-$(YAAP_BUILDTYPE)-$(TARGET_PRODUCT_SHORT)-$(BUILD_DATE)
-ROM_FINGERPRINT := YAAP/$(PLATFORM_VERSION)/$(TARGET_PRODUCT_SHORT)/$(shell date -u +%H%M)
+BOOTLEGGERS_BUILDTYPE ?= HOMEMADE
+BOOTLEGGERS_BUILD_VERSION := $(PLATFORM_VERSION)
+BOOTLEGGERS_VERSION := $(BOOTLEGGERS_BUILD_VERSION)-$(BOOTLEGGERS_BUILDTYPE)-$(TARGET_PRODUCT_SHORT)-$(BUILD_DATE)
+ROM_FINGERPRINT := BOOTLEGGERS/$(PLATFORM_VERSION)/$(TARGET_PRODUCT_SHORT)/$(shell date -u +%H%M)
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-  ro.yaap.build.version=$(YAAP_BUILD_VERSION) \
-  ro.yaap.build.date=$(BUILD_DATE) \
-  ro.yaap.buildtype=$(YAAP_BUILDTYPE) \
-  ro.yaap.fingerprint=$(ROM_FINGERPRINT) \
-  ro.yaap.version=$(YAAP_VERSION) \
-  ro.yaap.device=$(YAAP_BUILD) \
-  ro.modversion=$(YAAP_VERSION)
+  ro.bootleggers.build.version=$(BOOTLEGGERS_BUILD_VERSION) \
+  ro.bootleggers.build.date=$(BUILD_DATE) \
+  ro.bootleggers.buildtype=$(BOOTLEGGERS_BUILDTYPE) \
+  ro.bootleggers.fingerprint=$(ROM_FINGERPRINT) \
+  ro.bootleggers.version=$(BOOTLEGGERS_VERSION) \
+  ro.bootleggers.device=$(BOOTLEGGERS_BUILD) \
+  ro.modversion=$(BOOTLEGGERS_VERSION)
 
 # Signing
 ifneq (eng,$(TARGET_BUILD_VARIANT))
-ifneq (,$(wildcard vendor/yaap/signing/keys/releasekey.pk8))
-PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/yaap/signing/keys/releasekey
+ifneq (,$(wildcard vendor/bootleggers/signing/keys/releasekey.pk8))
+PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/bootleggers/signing/keys/releasekey
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.oem_unlock_supported=1
 endif
-ifneq (,$(wildcard vendor/yaap/signing/keys/otakey.x509.pem))
-PRODUCT_OTA_PUBLIC_KEYS := vendor/yaap/signing/keys/otakey.x509.pem
+ifneq (,$(wildcard vendor/bootleggers/signing/keys/otakey.x509.pem))
+PRODUCT_OTA_PUBLIC_KEYS := vendor/bootleggers/signing/keys/otakey.x509.pem
 endif
 endif

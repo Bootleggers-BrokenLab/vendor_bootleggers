@@ -1,7 +1,7 @@
 PRODUCT_PACKAGES += \
     ThemePicker \
 
-# Extra tools in YAAP
+# Extra tools in BOOTLEGGERS
 PRODUCT_PACKAGES += \
     bash \
     curl \
@@ -31,7 +31,7 @@ PRODUCT_PACKAGES += \
     mkfs.ntfs \
     mount.ntfs
 
-# YAAP packages
+# BOOTLEGGERS packages
 PRODUCT_PACKAGES += \
     Aperture \
     AvatarPicker \

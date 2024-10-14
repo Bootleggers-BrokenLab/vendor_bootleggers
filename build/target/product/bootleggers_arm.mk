@@ -1,4 +1,4 @@
-# Copyright (C) 2019 The LineageOS Project
+# Copyright (C) 2018-2019 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,7 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product, vendor/yaap/config/common.mk)
+$(call inherit-product, build/target/product/aosp_arm.mk)
 
-# Allow building otatools
-TARGET_FORCE_OTA_PACKAGE := true
+include vendor/bootleggers/build/target/product/bootleggers_generic_target.mk
+
+TARGET_USES_64_BIT_BINDER := true
+
+PRODUCT_NAME := bootleggers_arm

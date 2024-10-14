@@ -1,11 +1,11 @@
-YAAP_FASTBOOT_PACKAGE := $(PRODUCT_OUT)/YAAP-$(YAAP_VERSION)-img.zip
+BOOTLEGGERS_FASTBOOT_PACKAGE := $(PRODUCT_OUT)/BOOTLEGGERS-$(BOOTLEGGERS_VERSION)-img.zip
 
-.PHONY: updatepackage yaap-fastboot
+.PHONY: updatepackage bootleggers-fastboot
 updatepackage: $(INTERNAL_UPDATE_PACKAGE_TARGET)
-yaap-fastboot: updatepackage
-	$(hide) mv $(INTERNAL_UPDATE_PACKAGE_TARGET) $(YAAP_FASTBOOT_PACKAGE)
+bootleggers-fastboot: updatepackage
+	$(hide) mv $(INTERNAL_UPDATE_PACKAGE_TARGET) $(BOOTLEGGERS_FASTBOOT_PACKAGE)
 	@echo -e ""
-	@echo -e "${cya}Building ${bldcya}YAAP${txtrst}";
+	@echo -e "${cya}Building ${bldcya}BOOTLEGGERS${txtrst}";
 	@echo -e "	:::   :::   :::         :::     :::::::::  "
 	@echo -e "	:+:   :+: :+: :+:     :+: :+:   :+:    :+: "
 	@echo -e "	 +:+ +:+ +:+   +:+   +:+   +:+  +:+    +:+ "
@@ -15,6 +15,6 @@ yaap-fastboot: updatepackage
 	@echo -e "	   ###  ###     ### ###     ### ###        "
 	@echo -e "		Yet Another AOSP Project			   "
 	@echo -e ""
-	@echo -e "zip: "$(YAAP_FASTBOOT_PACKAGE)
-	@echo -e "size: `ls -lah $(YAAP_FASTBOOT_PACKAGE) | cut -d ' ' -f 5`"
+	@echo -e "zip: "$(BOOTLEGGERS_FASTBOOT_PACKAGE)
+	@echo -e "size: `ls -lah $(BOOTLEGGERS_FASTBOOT_PACKAGE) | cut -d ' ' -f 5`"
 	@echo -e ""

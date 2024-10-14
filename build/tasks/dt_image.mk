@@ -8,7 +8,7 @@ INSTALLED_DTIMAGE_TARGET := $(PRODUCT_OUT)/dt.img
 ifeq ($(strip $(BOARD_KERNEL_PREBUILT_DT)),)
 
 ifeq ($(strip $(TARGET_CUSTOM_DTBTOOL)),)
-DTBTOOL_NAME := dtbToolYAAP
+DTBTOOL_NAME := dtbToolBOOTLEGGERS
 else
 DTBTOOL_NAME := $(TARGET_CUSTOM_DTBTOOL)
 endif
@@ -16,7 +16,7 @@ endif
 DTBTOOL := $(HOST_OUT_EXECUTABLES)/$(DTBTOOL_NAME)$(HOST_EXECUTABLE_SUFFIX)
 
 ifeq ($(strip $(TARGET_CUSTOM_DTBTOOL)),)
-# dtbToolYAAP will search subdirectories
+# dtbToolBOOTLEGGERS will search subdirectories
 possible_dtb_dirs = $(KERNEL_OUT)/arch/$(KERNEL_ARCH)/boot/
 else
 # Most specific paths must come first in possible_dtb_dirs

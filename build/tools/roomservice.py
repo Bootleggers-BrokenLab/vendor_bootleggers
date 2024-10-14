@@ -2,7 +2,7 @@
 # Copyright (C) 2012-2013, The CyanogenMod Project
 # Copyright (C) 2012-2015, SlimRoms Project
 # Copyright (C) 2016-2018, AOSiP
-# Copyright (C) 2020, YAAP
+# Copyright (C) 2020, BOOTLEGGERS
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -31,11 +31,11 @@ import urllib.request
 DEBUG = False
 default_manifest = ".repo/manifest.xml"
 
-custom_local_manifest = ".repo/local_manifests/yaap_manifest.xml"
+custom_local_manifest = ".repo/local_manifests/bootleggers_manifest.xml"
 custom_default_revision = "fifteen"
-custom_dependencies = "yaap.dependencies"
-org_manifest = "yaap"  # leave empty if org is provided in manifest
-org_display = "YAAP"  # needed for displaying
+custom_dependencies = "bootleggers.dependencies"
+org_manifest = "bootleggers"  # leave empty if org is provided in manifest
+org_display = "BOOTLEGGERS"  # needed for displaying
 
 github_auth = None
 

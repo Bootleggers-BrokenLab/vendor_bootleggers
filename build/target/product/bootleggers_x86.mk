@@ -14,8 +14,8 @@
 
 $(call inherit-product, build/target/product/aosp_x86.mk)
 
-include vendor/yaap/build/target/product/yaap_generic_target.mk
+include vendor/bootleggers/build/target/product/bootleggers_generic_target.mk
 
 TARGET_USES_64_BIT_BINDER := true
 
-PRODUCT_NAME := yaap_x86
+PRODUCT_NAME := bootleggers_x86

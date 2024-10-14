@@ -15,13 +15,13 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/yaap_arm.mk \
-    $(LOCAL_DIR)/yaap_arm64.mk \
-    $(LOCAL_DIR)/yaap_x86.mk \
-    $(LOCAL_DIR)/yaap_x86_64.mk
+    $(LOCAL_DIR)/bootleggers_arm.mk \
+    $(LOCAL_DIR)/bootleggers_arm64.mk \
+    $(LOCAL_DIR)/bootleggers_x86.mk \
+    $(LOCAL_DIR)/bootleggers_x86_64.mk
 
 COMMON_LUNCH_CHOICES := \
-    yaap_arm-userdebug \
-    yaap_arm64-userdebug \
-    yaap_x86-userdebug \
-    yaap_x86_64-userdebug
+    bootleggers_arm-userdebug \
+    bootleggers_arm64-userdebug \
+    bootleggers_x86-userdebug \
+    bootleggers_x86_64-userdebug
