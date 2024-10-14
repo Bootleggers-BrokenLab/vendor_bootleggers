@@ -27,8 +27,8 @@ bootleggers: otapackage
 	@echo -e "The build is done, be sure to get it on:"
 	@echo -e "$(BOOTLEGGERS_TARGET_PACKAGE)"
 	@echo -e ""
-	@echo -e "zip: "$(BOOTLEG_TARGET_PACKAGE)
-	@echo -e "size: `ls -lah $(BOOTLEG_TARGET_PACKAGE) | cut -d ' ' -f 5`"
+	@echo -e "zip: "$(BOOTLEGGERS_TARGET_PACKAGE)
+	@echo -e "size: `ls -lah $(BOOTLEGGERS_TARGET_PACKAGE) | cut -d ' ' -f 5`"
 	@echo -e "Also, enjoy your $(BOOTLEGGERS_BUILD_TYPE)build"
 	@echo -e ""
 
