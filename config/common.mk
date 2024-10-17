@@ -100,7 +100,6 @@ PRODUCT_PACKAGES += \
     DialerOverlayVanilla \
     FrameworksOverlayVanilla \
     LatinIMEOverlayVanilla \
-    OpenDeltaOverlayVanilla \
     SettingsProviderOverlayVanilla \
     ThemePickerOverlayVanilla
 # Include LatinIME dictionaries
