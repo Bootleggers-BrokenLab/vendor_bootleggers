@@ -28,8 +28,8 @@ endif
 PRODUCT_PACKAGES += \
     charger_res_images
 
-# Copy all YAAP-specific init rc files
-$(foreach f,$(wildcard vendor/yaap/prebuilt/common/etc/init/*.rc),\
+# Copy all BOOTLEGGERS-specific init rc files
+$(foreach f,$(wildcard vendor/bootleggers/prebuilt/common/etc/init/*.rc),\
     $(eval PRODUCT_COPY_FILES += $(f):$(TARGET_COPY_OUT_SYSTEM)/etc/init/$(notdir $f)))
 
 # Don't compile SystemUITests
@@ -63,12 +63,12 @@ PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/boot/boot-imag
 
 # Permissions
 PRODUCT_COPY_FILES += \
-    vendor/yaap/prebuilt/common/etc/permissions/yaap-privapp-permissions.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/yaap-privapp-permissions.xml \
-    vendor/yaap/prebuilt/common/etc/permissions/yaap-power-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/yaap-power-whitelist.xml
+    vendor/bootleggers/prebuilt/common/etc/permissions/bootleggers-privapp-permissions.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/bootleggers-privapp-permissions.xml \
+    vendor/bootleggers/prebuilt/common/etc/permissions/bootleggers-power-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/bootleggers-power-whitelist.xml
 
 # Cloned app exemption
 PRODUCT_COPY_FILES += \
-    vendor/yaap/prebuilt/common/etc/sysconfig/preinstalled-packages-platform-yaap-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/preinstalled-packages-platform-yaap-product.xml
+    vendor/bootleggers/prebuilt/common/etc/sysconfig/preinstalled-packages-platform-bootleggers-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/preinstalled-packages-platform-bootleggers-product.xml
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -77,7 +77,7 @@ PRODUCT_PACKAGES += \
 
 # Enable Android Beam on all targets
 PRODUCT_COPY_FILES += \
-    vendor/yaap/prebuilt/common/etc/permissions/android.software.nfc.beam.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.software.nfc.beam.xml
+    vendor/bootleggers/prebuilt/common/etc/permissions/android.software.nfc.beam.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.software.nfc.beam.xml
 
 # Enable whole-program R8 Java optimizations for SystemUI and system_server,
 # but also allow explicit overriding for testing and development.
@@ -85,10 +85,10 @@ SYSTEM_OPTIMIZE_JAVA ?= true
 SYSTEMUI_OPTIMIZE_JAVA ?= true
 
 # Product overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/yaap/overlay/frameworks
-PRODUCT_PACKAGE_OVERLAYS += vendor/yaap/overlay/packages
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/yaap/overlay/frameworks
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/yaap/overlay/packages
+PRODUCT_PACKAGE_OVERLAYS += vendor/bootleggers/overlay/frameworks
+PRODUCT_PACKAGE_OVERLAYS += vendor/bootleggers/overlay/packages
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/bootleggers/overlay/frameworks
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/bootleggers/overlay/packages
 PRODUCT_PACKAGES += \
     CertifiedPropsOverlay \
     FrameworksOverlay \
@@ -104,14 +104,14 @@ PRODUCT_PACKAGES += \
     SettingsProviderOverlayVanilla \
     ThemePickerOverlayVanilla
 # Include LatinIME dictionaries
-PRODUCT_PACKAGE_OVERLAYS += vendor/yaap/overlay-vanilla/dictionaries
-PRODUCT_PACKAGE_OVERLAYS += vendor/yaap/overlay-vanilla/packages
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/yaap/overlay-vanilla/dictionaries
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/yaap/overlay-vanilla/packages
+PRODUCT_PACKAGE_OVERLAYS += vendor/bootleggers/overlay-vanilla/dictionaries
+PRODUCT_PACKAGE_OVERLAYS += vendor/bootleggers/overlay-vanilla/packages
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/bootleggers/overlay-vanilla/dictionaries
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/bootleggers/overlay-vanilla/packages
 endif
 PRODUCT_COPY_FILES += \
-    vendor/yaap/overlay/partition_order.xml:$(TARGET_COPY_OUT_PRODUCT)/overlay/partition_order.xml \
-    vendor/yaap/overlay/config-system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/overlay/config/config.xml
+    vendor/bootleggers/overlay/partition_order.xml:$(TARGET_COPY_OUT_PRODUCT)/overlay/partition_order.xml \
+    vendor/bootleggers/overlay/config-system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/overlay/config/config.xml
 
 # Disable vendor restrictions
 PRODUCT_RESTRICT_VENDOR_FILES := false
@@ -126,10 +126,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.input.video_enabled=false
 
 # Packages
-include vendor/yaap/config/packages.mk
+include vendor/bootleggers/config/packages.mk
 
 # Versioning
-include vendor/yaap/config/version.mk
+include vendor/bootleggers/config/version.mk
 
 # ART
 
@@ -163,7 +163,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 endif
 
 # FCM
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += vendor/yaap/config/device_framework_matrix.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += vendor/bootleggers/config/device_framework_matrix.xml
 
 # EGL - Blobcache configuration
 PRODUCT_VENDOR_PROPERTIES += \
@@ -187,7 +187,7 @@ PRODUCT_HOST_PACKAGES += \
 $(call inherit-product, vendor/themes/common.mk)
 
 # Sepolicy
-$(call inherit-product, vendor/yaap/config/sepolicy.mk)
+$(call inherit-product, vendor/bootleggers/config/sepolicy.mk)
 
 # Virtualization
 $(call inherit-product, packages/modules/Virtualization/apex/product_packages.mk)

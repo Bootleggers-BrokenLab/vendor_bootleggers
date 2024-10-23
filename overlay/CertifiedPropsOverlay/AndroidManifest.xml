@@ -14,7 +14,7 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="android.yaap.certifiedprops.overlay"
+    package="android.bootleggers.certifiedprops.overlay"
     android:versionCode="1"
     android:versionName="1.0">
 

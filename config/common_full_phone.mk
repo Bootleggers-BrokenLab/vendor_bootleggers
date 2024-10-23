@@ -1,5 +1,5 @@
 # Inherit common stuff
-$(call inherit-product, vendor/yaap/config/common.mk)
+$(call inherit-product, vendor/bootleggers/config/common.mk)
 
 # Sensitive Phone Numbers list
 PRODUCT_PACKAGES += \

@@ -12,8 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product, build/target/product/aosp_arm64.mk)
+$(call inherit-product, build/target/product/aosp_x86_64.mk)
 
-include vendor/yaap/build/target/product/yaap_generic_target.mk
+include vendor/bootleggers/build/target/product/bootleggers_generic_target.mk
 
-PRODUCT_NAME := yaap_arm64
+PRODUCT_NAME := bootleggers_x86_64

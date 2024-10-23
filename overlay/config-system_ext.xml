@@ -15,5 +15,5 @@
 -->
 
 <config>
-    <overlay package="android.yaap.certifiedprops.overlay" enabled="true" />
+    <overlay package="android.bootleggers.certifiedprops.overlay" enabled="true" />
 </config>
