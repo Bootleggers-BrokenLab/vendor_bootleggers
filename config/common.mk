@@ -205,6 +205,9 @@ $(call inherit-product, vendor/themes/common.mk)
 # Sepolicy
 $(call inherit-product, vendor/bootleggers/config/sepolicy.mk)
 
+# Bootleggers-specific theming
+$(call inherit-product-if-exists, vendor/shishufied/config.mk)
+
 # Virtualization
 $(call inherit-product, packages/modules/Virtualization/apex/product_packages.mk)
 PRODUCT_PRODUCT_PROPERTIES += \
